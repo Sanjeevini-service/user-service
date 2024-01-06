@@ -10,6 +10,6 @@ adminRouter.post("/", validateResource(getAdminByEmailSchema), adminController.g
 
 adminRouter.post("/create", validateResource(createAdminSchema), adminController.createAdmin);
 
-adminRouter.post("/update-email", validateResource(updateAdminEmailSchema), adminController.updateAdminEmail);
+adminRouter.patch("/update", validateResource(updateAdminEmailSchema), adminController.updateAdminByEmail);
 
 export default adminRouter;

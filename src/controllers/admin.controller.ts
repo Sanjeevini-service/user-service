@@ -55,10 +55,10 @@ export default class AdminController extends BaseController {
     }
   };
 
-  updateAdminEmail = async (req: Request, res: Response, next: NextFunction) => {
+  updateAdminByEmail = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const match = { email: res.locals.user.email };
-      const update = { email: req.body.email };
+      const match = { email: req.body.email };
+      const update = { verificationCode: req.body.verificationCode };
       const resource = (await this.service.findOneAndUpdate(match, update)) as AdminSI;
       if (!resource) {
         const message = "Invalid user";

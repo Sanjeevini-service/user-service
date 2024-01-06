@@ -15,6 +15,7 @@ export const updateAdminEmailSchema = object({
     email: string({
       required_error: "Email is required",
     }).email("Invalid email or password"),
+    verificationCode: string({ required_error: "verificationCode is required" }),
   }),
 });
 export const getAdminByEmailSchema = object({
