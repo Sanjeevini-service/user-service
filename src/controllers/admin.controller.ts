@@ -4,10 +4,7 @@ import AdminService from "../services/admin.service";
 import BaseController from "./base.controller";
 import { NextFunction, Request, Response } from "express";
 import sendResponse from "../utils/sendResponse";
-import sendEmail from "../utils/mailer";
-import config from "config";
 import { generateOTP } from "../utils/uniqueNumber";
-import { generateEmailTemplateForOTP } from "../utils/emailTemplate";
 import AdminSI from "../interfaces/admin.interface";
 
 @autoInjectable()
